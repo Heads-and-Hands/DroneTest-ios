@@ -10,7 +10,10 @@ workspace:
   path: /drone/src
 
 steps:
-  - name: Prepare
+  - name: Build
+    environment:
+        MATCH_PASSWORD:
+            from_secret: MATCH_PASSWORD
     commands:
       - echo hello
       - echo $PWD
@@ -19,12 +22,4 @@ steps:
       - rbenv install 2.7.6
       - rbenv local 2.7.6
       - bundle install
-
-  - name: Build
-  
-    environment:
-        MATCH_PASSWORD:
-            from_secret: MATCH_PASSWORD
-    commands:
       - bundle exec fastlane internal
-
