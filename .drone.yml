@@ -16,6 +16,7 @@ steps:
       - echo $PWD
       - whoami
       - eval "$(rbenv init -)"
+      - rbenv install 2.7.6
       - rbenv local 2.7.6
       - bundle exec install
 
