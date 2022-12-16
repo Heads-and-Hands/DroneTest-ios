@@ -1,0 +1,20 @@
+kind: pipeline
+type: exec
+name: default
+
+platform:
+  os: macosx
+
+workspace:
+  path: /drone/src
+
+steps:
+  - name: Prepare
+    commands:
+      - rbenv local 2.7.6
+      - bundle exec install
+
+  - name: Build
+    commands:
+      - bundle exec fastlane internal
+

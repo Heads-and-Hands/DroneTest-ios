@@ -1,0 +1,4 @@
+git_url "git@github.com:Heads-and-Hands/certs-ios.git"
+clone_branch_directly true
+app_identifier "ru.handh.drone"
+
