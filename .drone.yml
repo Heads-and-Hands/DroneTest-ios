@@ -12,6 +12,7 @@ workspace:
 steps:
   - name: Prepare
     commands:
+      - echo hello
       - rbenv local 2.7.6
       - bundle exec install
 
