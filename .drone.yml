@@ -15,6 +15,10 @@ steps:
       - bundle exec install
 
   - name: Build
+  
+    environment:
+        MATCH_PASSWORD:
+            from_secret: MATCH_PASSWORD
     commands:
       - bundle exec fastlane internal
 
