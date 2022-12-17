@@ -21,4 +21,5 @@ steps:
       - eval "$(rbenv init -)"
       - rbenv install 2.7.6
       - bundle install
+      - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       - bundle exec fastlane internal
