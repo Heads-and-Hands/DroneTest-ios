@@ -19,7 +19,7 @@ steps:
       - echo $PWD
       - whoami
       - eval "$(rbenv init -)"
-      - rnenv install -L
+      - rbenv install -L
       - rbenv local 2.7.6
       - rbenv version
       - bundle install
