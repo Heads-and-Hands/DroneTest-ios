@@ -19,6 +19,5 @@ steps:
       - echo $PWD
       - whoami
       - eval "$(rbenv init -)"
-      - rbenv version
       - bundle install
       - bundle exec fastlane internal
