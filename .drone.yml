@@ -19,8 +19,9 @@ steps:
       - echo $PWD
       - whoami
       - eval "$(rbenv init -)"
-      - rbenv install 2.7.6
+      - rbenv install
       - rbenv local 2.7.6
       - rbenv version
       - bundle install
+      - xcode-select --install  
       - bundle exec fastlane internal
