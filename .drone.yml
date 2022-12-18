@@ -28,7 +28,7 @@ steps:
       - security create-keychain -p <password> build.keychain
       - security default-keychain -s build.keychain
       - security unlock-keychain -p <password> build.keychain
-      - security set-key-partition-list -S apple-tool:,apple: -s -k actions build.keychain
+      - security set-key-partition-list -S "apple-tool:,apple:" -s -k actions build.keychain
       
       - sudo security add-trusted-cert -d -r unspecified -k build.keychain /Users/ec2-user/AppleWWDRCA.cer
       
