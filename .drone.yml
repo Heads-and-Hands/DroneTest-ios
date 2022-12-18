@@ -24,10 +24,10 @@ steps:
       
       - echo $GPG_PASSWORD | gpg --batch --yes --passphrase-fd 0 -d -o fastlane/api-key.json fastlane/api-key.json.gpg
       
-      - security create-keychain -p password "KCH.keychain"
-      - security unlock-keychain -p password "KCH.keychain"
+      - security create-keychain -p password "/Users/ec2-user/Library/Keychains/KCH.keychain"
+      - security unlock-keychain -p password "/Users/ec2-user/Library/Keychains/KCH.keychain"
       - security list-keychains
-      - security add-trusted-cert -d -r unspecified -k "KCH.keychain" /Users/ec2-user/AppleWWDRCA.cer
+      - security add-trusted-cert -d -r unspecified -k "/Users/ec2-user/Library/Keychains/KCH.keychain" /Users/ec2-user/AppleWWDRCA.cer
       
       - eval "$(rbenv init -)"
       - rbenv install 2.7.6
