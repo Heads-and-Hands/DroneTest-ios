@@ -21,7 +21,7 @@ steps:
     commands:
       - echo $PWD
       - whoami
-      - echo $GPG_PASSWORD | gpg --batch --yes --passphrase-fd 0 -d -o api-key.json api-key.json.gpg
+      - echo $GPG_PASSWORD | gpg --batch --yes --passphrase-fd 0 -d -o fastlane/api-key.json fastlane/api-key.json.gpg
       - eval "$(rbenv init -)"
       - rbenv install 2.7.6
       - bundle install
