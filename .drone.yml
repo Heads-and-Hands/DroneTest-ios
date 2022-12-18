@@ -24,7 +24,7 @@ steps:
       
       - echo $GPG_PASSWORD | gpg --batch --yes --passphrase-fd 0 -d -o fastlane/api-key.json fastlane/api-key.json.gpg
       
-      - security delete-keychain password "/Users/ec2-user/Library/Keychains/KCH.keychain"
+      - sudo security delete-keychain password "/Users/ec2-user/Library/Keychains/KCH.keychain"
       - security create-keychain -p password "/Users/ec2-user/Library/Keychains/KCH.keychain"
       - security unlock-keychain -p password "/Users/ec2-user/Library/Keychains/KCH.keychain"
       - security list-keychains
