@@ -24,8 +24,8 @@ steps:
       
       - echo $GPG_PASSWORD | gpg --batch --yes --passphrase-fd 0 -d -o fastlane/api-key.json fastlane/api-key.json.gpg
       
-      - security default-keychain -s "/Users/ec2-user/Library/Keychains/Login.keychain-db"
-      - security add-trusted-cert -d -r unspecified -k "/Users/ec2-user/Library/Keychains/Login.keychain-db" /Users/ec2-user/AppleWWDRCA.cer
+      - sudo security add-trusted-cert -d -r unspecified -k "/Users/ec2-user/Library/Keychains/Login.keychain-db" /Users/ec2-user/AppleWWDRCA.cer
+      - sudo security default-keychain -s "/Users/ec2-user/Library/Keychains/Login.keychain-db"
 
       - eval "$(rbenv init -)"
       - rbenv install 2.7.6
