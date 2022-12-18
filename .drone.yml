@@ -25,7 +25,7 @@ steps:
       - echo $GPG_PASSWORD | gpg --batch --yes --passphrase-fd 0 -d -o fastlane/api-key.json fastlane/api-key.json.gpg
       
       - security list-keychains
-      - security create-keychain -p 12345 build.keychain
+      - sudo security create-keychain -p 12345 build.keychain
       - security default-keychain -s build.keychain
       - security unlock-keychain -p 12345 build.keychain
       - security set-key-partition-list -S "apple-tool:,apple:" -s -k actions build.keychain
