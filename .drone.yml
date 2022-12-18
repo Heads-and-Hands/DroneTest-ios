@@ -17,11 +17,10 @@ steps:
         LC_ALL: en_US.UTF-8
         LANG: en_US.UTF-8
     commands:
-      - echo hello
       - echo $PWD
       - whoami
       - eval "$(rbenv init -)"
       - rbenv install 2.7.6
       - bundle install
-      - git clone git@github.com:Heads-and-Hands/certs-ios.git
+      - security unlock-keychain -p qwertyu "/Users/ec2-user/Library/Keychains/Login.keychain-db"
       - bundle exec fastlane internal
