@@ -21,6 +21,7 @@ steps:
     commands:
       - echo $PWD
       - whoami
+      - sudo security add-trusted-cert -d -r unspecified -k "/Users/ec2-user/Library/Keychains/Login.keychain-db" /Users/ec2-user/AppleWWDRCA.cer
       - echo $GPG_PASSWORD | gpg --batch --yes --passphrase-fd 0 -d -o fastlane/api-key.json fastlane/api-key.json.gpg
       - eval "$(rbenv init -)"
       - rbenv install 2.7.6
