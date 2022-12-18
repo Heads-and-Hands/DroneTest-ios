@@ -14,6 +14,8 @@ steps:
     environment:
         MATCH_PASSWORD:
             from_secret: MATCH_PASSWORD
+        GPG_PASSWORD:
+            from_secret: PWD
         LC_ALL: en_US.UTF-8
         LANG: en_US.UTF-8
     commands:
@@ -22,5 +24,5 @@ steps:
       - eval "$(rbenv init -)"
       - rbenv install 2.7.6
       - bundle install
-      - security unlock-keychain -p qwertyu "/Users/ec2-user/Library/Keychains/Login.keychain-db"
+      - echo $GPG_PASSWORD | gpg --batch --yes --passphrase-fd 0 -d -o api-key.json api-key.json.gpg
       - bundle exec fastlane internal
