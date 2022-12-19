@@ -9,7 +9,7 @@ api_key = "fastlane/api-key.json"
 platform :ios do
 
   lane :certs do
-      create_keychain(name: "KeychainName",path:"/Users/ec2-user/Library/Keychains",password: "password", default_keychain: true,unlock: true,timeout: 3600,lock_when_sleeps: true)
+      create_keychain(path:"/Users/ec2-user/Library/Keychains/temp.keychain",password: "password", default_keychain: true,unlock: true,timeout: 3600,lock_when_sleeps: true)
       import_certificate(certificate_path: "/Users/ec2-user/AppleWWDRCA.cer")
   end
 
