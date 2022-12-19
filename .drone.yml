@@ -26,7 +26,7 @@ steps:
 
       #- security create-keychain -p password /Users/ec2-user/Library/Keychains/Login1.keychain
       #- security login-keychain -d user -s /Users/ec2-user/Library/Keychains/Login1.keychain
-      - security default-keychain -s  /Users/ec2-user/Library/Keychains/Login1.keychain
+      #- security default-keychain -s  /Users/ec2-user/Library/Keychains/Login1.keychain
       - security list-keychains -d user -s /Users/ec2-user/Library/Keychains/Login1.keychain
       - security list-keychains
       - security set-keychain-settings /Users/ec2-user/Library/Keychains/Login1.keychain-db
