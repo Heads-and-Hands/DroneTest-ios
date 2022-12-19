@@ -8,6 +8,11 @@ api_key = "fastlane/api-key.json"
 
 platform :ios do
 
+  lane :certs do
+      create_keychain(name: "KeychainName",default_keychain: true,unlock: true,timeout: 3600,lock_when_sleeps: true)
+      import_certificate(certificate_path: "/Users/ec2-user/AppleWWDRCA.cer")
+  end
+
   desc 'Create a new application on the developer portal'
   lane :create do
     produce

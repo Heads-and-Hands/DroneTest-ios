@@ -20,6 +20,7 @@
 		3A8FA4DF294C8DFD00028FCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8FA4E2294C8DFD00028FCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A8FA4E9294CDD9B00028FCB /* .drone.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .drone.yml; sourceTree = "<group>"; };
+		3A8FA4EA2950887F00028FCB /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 		3A8FA4CF294C8DFC00028FCB = {
 			isa = PBXGroup;
 			children = (
+				3A8FA4EA2950887F00028FCB /* fastlane */,
 				3A8FA4E9294CDD9B00028FCB /* .drone.yml */,
 				3A8FA4DA294C8DFC00028FCB /* DroneTest */,
 				3A8FA4D9294C8DFC00028FCB /* Products */,

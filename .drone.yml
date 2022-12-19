@@ -27,7 +27,5 @@ steps:
       - eval "$(rbenv init -)"
       - rbenv install 2.7.6
       - bundle install
-
-      - bundle exec fastlane run create_keychain(name: "KeychainName",default_keychain: true,unlock: true,timeout: 3600,lock_when_sleeps: true)
-      - bundle exec fastlane run import_certificate(certificate_path: "Users/ec2-user/AppleWWDRC.cer")
+      - bundle exec fastlane run certs
       - bundle exec fastlane internal
