@@ -28,5 +28,5 @@ steps:
       - rbenv install 2.7.6
       - bundle install
 
-      - bundle exec fatlane run setup_travis
+      - bundle exec fastlane run setup_travis
       - bundle exec fastlane internal
