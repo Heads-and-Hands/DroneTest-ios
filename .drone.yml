@@ -27,5 +27,5 @@ steps:
       - eval "$(rbenv init -)"
       - rbenv install 2.7.6
       - bundle install
-      - bundle exec fastlane certs
-      - bundle exec fastlane internal
+      - bundle exec fastlane certs --verbose
+      - bundle exec fastlane internal --verbose
