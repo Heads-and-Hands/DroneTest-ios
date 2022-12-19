@@ -24,7 +24,7 @@ steps:
       
       - echo $GPG_PASSWORD | gpg --batch --yes --passphrase-fd 0 -d -o fastlane/api-key.json fastlane/api-key.json.gpg
 
-      - security create-keychain -p password /Users/ec2-user/Library/Keychains/Login1.keychain
+      #- security create-keychain -p password /Users/ec2-user/Library/Keychains/Login1.keychain
       #- security login-keychain -d user -s /Users/ec2-user/Library/Keychains/Login1.keychain
       - security default-keychain -s  /Users/ec2-user/Library/Keychains/Login1.keychain
       - security list-keychains -d user -s /Users/ec2-user/Library/Keychains/Login1.keychain
